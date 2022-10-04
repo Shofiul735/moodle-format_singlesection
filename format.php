@@ -46,12 +46,9 @@ $renderer = $PAGE->get_renderer('format_weeks');
 // Checking if the user is a student
 $isStudent = user_has_role_assignment($USER->id, 5);
 
-if (!empty($displaysection)) {
-    $format->set_section_number($displaysection);
+if ($isStudent) {
+    $renderer->display($course, $section != 0);
+} else {
+    $renderer->print_single_section_page($course, $sections, $mods, $modnames, $modnamesused, $displaysection);
 }
-
-$outputclass = $format->get_output_classname('content');
-$output = new $outputclass($format);
-echo $renderer->render($output);
-
 $PAGE->requires->js('/course/format/weeks/format.js');
