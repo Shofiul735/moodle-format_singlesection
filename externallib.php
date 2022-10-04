@@ -49,16 +49,6 @@ function get_course_image($id)
 function get_progress($course)
 {
     global $USER;
-    $completion = new \completion_info($course);
-    //if user having edit access then ignore it
-    $coursecontext = context_course::instance($course->id);
-    if (has_capability('moodle/course:update', $coursecontext)) {
-        continue;
-    }
-    // First, let's make sure completion is enabled.
-    if (!$completion->is_enabled()) {
-        continue;
-    }
     $percentage = core_completion\progress::get_course_progress_percentage($course, $USER->id);
     if (!is_null($percentage)) {
         return floor($percentage);
