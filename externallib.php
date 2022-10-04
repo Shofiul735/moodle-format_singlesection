@@ -56,3 +56,18 @@ function get_progress($course)
         return 0;
     }
 }
+
+function get_first_activity_url($modules)
+{
+    $urlObj = null;
+    foreach ($modules as $module) {
+        // Only add activities the user can access, aren't in stealth mode and have a url (eg. mod_label does not).
+        if (!$module->uservisible || $module->is_stealth() || empty($module->url)) {
+            continue;
+        }
+        // Module URL.
+        $urlObj = new moodle_url($module->url, array('forceview' => 1));
+        break;
+    }
+    return $urlObj;
+}
