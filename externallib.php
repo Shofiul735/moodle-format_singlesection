@@ -71,3 +71,24 @@ function get_first_activity_url($modules)
     }
     return $urlObj;
 }
+
+function resumed_course_activity_url($course, $userid, $modules)
+{
+    $urlObj = null;
+    $completion = new \completion_info($course);
+    foreach ($modules as $module) {
+        // Only add activities the user can access, aren't in stealth mode and have a url (eg. mod_label does not).
+        if (!$module->uservisible || $module->is_stealth() || empty($module->url)) {
+            continue;
+        }
+
+        $data = $completion->get_data($module, true, $userid);
+        $completed = $data->completionstate == COMPLETION_INCOMPLETE ? 0 : 1;
+        // Module URL.
+        if (!$completed) {
+            $urlObj = new moodle_url($module->url, array('forceview' => 1));
+            break;
+        }
+    }
+    return $urlObj;
+}
