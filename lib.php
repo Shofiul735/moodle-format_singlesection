@@ -15,14 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin functions for the format_pluginname plugin.
+ * Plugin functions for the format_newsection plugin.
  *
- * @package   format_singlesection
+ * @package   format_newsection
  * @copyright 2022, Md. Shofiul Islam
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class format_singlesection extends core_courseformat\base
+class format_newsection extends core_courseformat\base
 {
 
     /**
