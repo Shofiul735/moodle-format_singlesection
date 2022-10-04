@@ -41,7 +41,7 @@ $format = course_get_format($course);
 // Make sure section 0 is created.
 course_create_sections_if_missing($format->get_course(), 0);
 
-$renderer = $PAGE->get_renderer('format_weeks');
+$renderer = $PAGE->get_renderer('format_newsection');
 
 // Checking if the user is a student
 $isStudent = user_has_role_assignment($USER->id, 5);
