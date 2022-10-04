@@ -18,8 +18,7 @@
  * newsection course format.  Display the whole course as "newsection" made of modules.
  *
  * @package format_newsection
- * @copyright 2006 The Open University
- * @author N.D.Freear@open.ac.uk, and others.
+ * @copyright 2022 Md. Shofiul Islam
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die();
