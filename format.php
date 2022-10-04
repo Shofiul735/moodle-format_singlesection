@@ -27,10 +27,10 @@ require_once($CFG->libdir . '/filelib.php');
 require_once($CFG->libdir . '/completionlib.php');
 
 // Horrible backwards compatible parameter aliasing..
-if ($week = optional_param('week', 0, PARAM_INT)) {
+if ($newsection = optional_param('newsection', 0, PARAM_INT)) {
     $url = $PAGE->url;
-    $url->param('section', $week);
-    debugging('Outdated week param passed to course/view.php', DEBUG_DEVELOPER);
+    $url->param('section', $newsection);
+    debugging('Outdated newsection param passed to course/view.php', DEBUG_DEVELOPER);
     redirect($url);
 }
 // End backwards-compatible aliasing..
@@ -50,4 +50,4 @@ if ($isStudent) {
 } else {
     $renderer->print_single_section_page($course, $sections, $mods, $modnames, $modnamesused, $displaysection);
 }
-$PAGE->requires->js('/course/format/weeks/format.js');
+$PAGE->requires->js('/course/format/newsection/format.js');
