@@ -16,8 +16,6 @@
 
 
 /**
- * Block definition class for the block_pluginname plugin.
- *
  * @package   format_newsection
  * @copyright 2022, Md. Shofiul Islam
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
