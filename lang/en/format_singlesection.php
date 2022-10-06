@@ -16,26 +16,26 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'format_newsection', language 'en', branch 'MOODLE_20_STABLE'
+ * Strings for component 'format_singlesection', language 'en', branch 'MOODLE_20_STABLE'
  *
- * @package   format_newsection
+ * @package   format_singlesection
  * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['addsections'] = 'Add newsection';
-$string['currentsection'] = 'This newsection';
-$string['editsection'] = 'Edit newsection';
-$string['editsectionname'] = 'Edit newsection name';
-$string['deletesection'] = 'Delete newsection';
-$string['newsectionname'] = 'New name for newsection {$a}';
-$string['sectionname'] = 'newsection';
-$string['pluginname'] = 'newsection format';
+$string['addsections'] = 'Add singlesection';
+$string['currentsection'] = 'This singlesection';
+$string['editsection'] = 'Edit singlesection';
+$string['editsectionname'] = 'Edit singlesection name';
+$string['deletesection'] = 'Delete singlesection';
+$string['singlesectionname'] = 'New name for singlesection {$a}';
+$string['sectionname'] = 'singlesection';
+$string['pluginname'] = 'singlesection format';
 $string['section0name'] = 'General';
-$string['page-course-view-newsection'] = 'Any course main page in newsection format';
-$string['page-course-view-newsection-x'] = 'Any course page in newsection format';
-$string['hidefromothers'] = 'Hide newsection';
-$string['showfromothers'] = 'Show newsection';
+$string['page-course-view-singlesection'] = 'Any course main page in singlesection format';
+$string['page-course-view-singlesection-x'] = 'Any course page in singlesection format';
+$string['hidefromothers'] = 'Hide singlesection';
+$string['showfromothers'] = 'Show singlesection';
 $string['automaticenddate'] = 'Calculate the end date from the number of sections';
 $string['automaticenddate_help'] = 'If enabled, the end date for the course will be automatically calculated from the number of sections and the course start date.';
-$string['privacy:metadata'] = 'The newsection format plugin does not store any personal data.';
+$string['privacy:metadata'] = 'The singlesection format plugin does not store any personal data.';
