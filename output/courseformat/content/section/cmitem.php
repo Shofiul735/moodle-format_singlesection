@@ -15,14 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Output cmitem for the format_newsection plugin.
+ * Output cmitem for the format_singlesection plugin.
  *
- * @package   format_newsection
- * @copyright Year, You Name <your@email.address>
+ * @package   format_singlesection
+ * @copyright 2022,Md. Shofiul Islam
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace format_newsection\output\courseformat\content\section;
+namespace format_singlesection\output\courseformat\content\section;
 
 use core_courseformat\output\local\content\section\cmitem as cmitem_base;
 
@@ -36,6 +36,6 @@ class cmitem extends cmitem_base
      */
     public function get_template_name(\renderer_base $renderer): string
     {
-        return 'format_newsection/local/content/section/cmitem';
+        return 'format_singlesection/local/content/section/cmitem';
     }
 }
