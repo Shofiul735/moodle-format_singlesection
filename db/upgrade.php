@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Upgrade scripts for course format "newsection"
+ * Upgrade scripts for course format "singlesection"
  *
- * @package    format_newsection
+ * @package    format_singlesection
  * @copyright  2017 Marina Glancy
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,12 +25,12 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Upgrade script for format_newsection
+ * Upgrade script for format_singlesection
  *
  * @param int $oldversion the version we are upgrading from
  * @return bool result
  */
-function xmldb_format_newsection_upgrade($oldversion)
+function xmldb_format_singlesection_upgrade($oldversion)
 {
     global $CFG, $DB;
 

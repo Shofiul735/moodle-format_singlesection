@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Format newsection event handler definition.
+ * Format singlesection event handler definition.
  *
- * @package format_newsection
+ * @package format_singlesection
  * @copyright 2017 Mark Nelson <markn@moodle.com>
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,14 +27,14 @@ defined('MOODLE_INTERNAL') || die();
 $observers = array(
     array(
         'eventname'   => '\core\event\course_updated',
-        'callback'    => 'format_newsection_observer::course_updated',
+        'callback'    => 'format_singlesection_observer::course_updated',
     ),
     array(
         'eventname'   => '\core\event\course_section_created',
-        'callback'    => 'format_newsection_observer::course_section_created',
+        'callback'    => 'format_singlesection_observer::course_section_created',
     ),
     array(
         'eventname'   => '\core\event\course_section_deleted',
-        'callback'    => 'format_newsection_observer::course_section_deleted',
+        'callback'    => 'format_singlesection_observer::course_section_deleted',
     )
 );
