@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * newsection course format.  Display the whole course as "newsection" made of modules.
+ * singlesection course format.  Display the whole course as "singlesection" made of modules.
  *
- * @package format_newsection
+ * @package format_singlesection
  * @copyright 2022 Md. Shofiul Islam
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,10 +27,10 @@ require_once($CFG->libdir . '/filelib.php');
 require_once($CFG->libdir . '/completionlib.php');
 
 // Horrible backwards compatible parameter aliasing..
-if ($newsection = optional_param('newsection', 0, PARAM_INT)) {
+if ($singlesection = optional_param('singlesection', 0, PARAM_INT)) {
     $url = $PAGE->url;
-    $url->param('section', $newsection);
-    debugging('Outdated newsection param passed to course/view.php', DEBUG_DEVELOPER);
+    $url->param('section', $singlesection);
+    debugging('Outdated singlesection param passed to course/view.php', DEBUG_DEVELOPER);
     redirect($url);
 }
 // End backwards-compatible aliasing..
@@ -40,7 +40,7 @@ $format = course_get_format($course);
 // Make sure section 0 is created.
 course_create_sections_if_missing($format->get_course(), 0);
 
-$renderer = $PAGE->get_renderer('format_newsection');
+$renderer = $PAGE->get_renderer('format_singlesection');
 
 // Checking if the user is a student
 $isStudent = user_has_role_assignment($USER->id, 5);
@@ -50,4 +50,4 @@ if ($isStudent) {
 } else {
     $renderer->print_single_section_page($course, $sections, $mods, $modnames, $modnamesused, $displaysection);
 }
-$PAGE->requires->js('/course/format/newsection/format.js');
+$PAGE->requires->js('/course/format/singlesection/format.js');
