@@ -15,14 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Output section for the format_newsection plugin.
+ * Output section for the format_singlesection plugin.
  *
- * @package   format_newsection
+ * @package   format_singlesection
  * @copyright 2022, Md. Shofiul Islam
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace format_newsection\output\courseformat\content;
+namespace format_singlesection\output\courseformat\content;
 
 use core_courseformat\output\local\content\section as section_base;
 
@@ -36,6 +36,6 @@ class section extends section_base
      */
     public function get_template_name(\renderer_base $renderer): string
     {
-        return 'format_newsection/local/content/section';
+        return 'format_singlesection/local/content/section';
     }
 }
