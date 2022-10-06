@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * Privacy Subsystem implementation for format_newsection.
+ * Privacy Subsystem implementation for format_singlesection.
  *
- * @package    format_newsection
+ * @package    format_singlesection
  * @copyright  2018 Carlos Escobedo <carlos@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace format_newsection\privacy;
+namespace format_singlesection\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 /**
- * Privacy Subsystem for format_newsection implementing null_provider.
+ * Privacy Subsystem for format_singlesection implementing null_provider.
  *
  * @copyright  2018 Carlos Escobedo <carlos@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
