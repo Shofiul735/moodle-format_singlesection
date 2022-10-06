@@ -15,14 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin functions for the format_newsection plugin.
+ * Plugin functions for the format_singlesection plugin.
  *
- * @package   format_newsection
+ * @package   format_singlesection
  * @copyright 2022, Md. Shofiul Islam
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class format_newsection extends core_courseformat\base
+class format_singlesection extends core_courseformat\base
 {
 
     /**
@@ -121,7 +121,7 @@ class format_newsection extends core_courseformat\base
  * @param mixed $newvalue
  * @return inplace_editable
  */
-function format_newsection_inplace_editable($itemtype, $itemid, $newvalue)
+function format_singlesection_inplace_editable($itemtype, $itemid, $newvalue)
 {
     global $DB, $CFG;
     require_once($CFG->dirroot . '/course/lib.php');
