@@ -1,6 +1,6 @@
 # New Section
 
-Moodle newsection is a course format plugin that shows different course style based on the user role.  
+Moodle singlesection is a course format plugin that shows different course style based on the user role.  
 
 # Features
   * Single section course view for the teacher and admin
@@ -9,19 +9,19 @@ Moodle newsection is a course format plugin that shows different course style ba
   * Student can see the total progress of the course
   
 # Configuration
-You can download this plugin from [Github](https://github.com/Shofiul735/moodle-format_newsection).
+You can download this plugin from [Github](https://github.com/Shofiul735/moodle-format_singlesection).
 
 > After installing the plugin, you can use the plugin by following:
   - Go to your course settings
   - Go to the course format section
-  - Select newsection format from the dropdown 
+  - Select singlesection format from the dropdown 
   
 ```
   Dashboard->My courses->Your Course Name->Settings->Course Format->Select course format from dropdown
 ```
 
 
-<img width="100%" alt="4  Proctoring settings" src="https://user-images.githubusercontent.com/35170218/194211818-e2d0b3f9-fe45-4a49-925e-466c0d84aeec.png">
+<img width="100%" alt="4  Proctoring settings" src="https://user-images.githubusercontent.com/35170218/194234941-4a1f0807-fe6a-431f-b15c-706f0c925bab.png">
 
 > Teacher View:
 <img width="100%" alt="2  Attempt Quiz" src="https://user-images.githubusercontent.com/35170218/194214736-2373131e-1b21-438d-8a7a-2c3400ec8f83.png">
