@@ -1,4 +1,4 @@
-# New Section
+# SingleSection
 
 Moodle singlesection is a course format plugin that shows different course style based on the user role.  
 
