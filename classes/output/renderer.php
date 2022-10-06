@@ -100,7 +100,7 @@ class renderer extends section_renderer
             echo html_writer::start_div();
             echo html_writer::tag('h1', $courseinfo->fullname);
             echo html_writer::end_div();
-            echo html_writer::img($imageurl, 'course image', ['width' => '100%']);
+            echo html_writer::img($imageurl, 'course image', ['width' => '100%', 'class' => 'newsection-image-height']);
             echo html_writer::start_div('text-justify mt-5');
             echo html_writer::tag('h3', 'Course Summary:', ['class' => 'text-primary']);
             echo html_writer::tag('h6', $courseinfo->summary, ['class' => 'text-secondary']);
