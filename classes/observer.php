@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Event observers used by the newsection course format.
+ * Event observers used by the singlesection course format.
  *
- * @package format_newsection
+ * @package format_singlesection
  * @copyright 2017 Mark Nelson <markn@moodle.com>
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,13 +25,13 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Event observer for format_newsection.
+ * Event observer for format_singlesection.
  *
- * @package format_newsection
+ * @package format_singlesection
  * @copyright 2017 Mark Nelson <markn@moodle.com>
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class format_newsection_observer
+class format_singlesection_observer
 {
 
     /**
@@ -41,10 +41,10 @@ class format_newsection_observer
      */
     public static function course_updated(\core\event\course_updated $event)
     {
-        if (class_exists('format_newsection', false)) {
-            // If class format_newsection was never loaded, this is definitely not a course in 'newsection' format.
-            // Course may still be in another format but format_newsection::update_end_date() will check it.
-            format_newsection::update_end_date($event->courseid);
+        if (class_exists('format_singlesection', false)) {
+            // If class format_singlesection was never loaded, this is definitely not a course in 'singlesection' format.
+            // Course may still be in another format but format_singlesection::update_end_date() will check it.
+            format_singlesection::update_end_date($event->courseid);
         }
     }
 
@@ -55,10 +55,10 @@ class format_newsection_observer
      */
     public static function course_section_created(\core\event\course_section_created $event)
     {
-        if (class_exists('format_newsection', false)) {
-            // If class format_newsection was never loaded, this is definitely not a course in 'newsection' format.
-            // Course may still be in another format but format_newsection::update_end_date() will check it.
-            format_newsection::update_end_date($event->courseid);
+        if (class_exists('format_singlesection', false)) {
+            // If class format_singlesection was never loaded, this is definitely not a course in 'singlesection' format.
+            // Course may still be in another format but format_singlesection::update_end_date() will check it.
+            format_singlesection::update_end_date($event->courseid);
         }
     }
 
@@ -69,10 +69,10 @@ class format_newsection_observer
      */
     public static function course_section_deleted(\core\event\course_section_deleted $event)
     {
-        if (class_exists('format_newsection', false)) {
-            // If class format_newsectionwas never loaded, this is definitely not a course in 'newsection' format.
-            // Course may still be in another format but format_newsection::update_end_date() will check it.
-            format_newsection::update_end_date($event->courseid);
+        if (class_exists('format_singlesection', false)) {
+            // If class format_singlesection was never loaded, this is definitely not a course in 'singlesection' format.
+            // Course may still be in another format but format_singlesection::update_end_date() will check it.
+            format_singlesection::update_end_date($event->courseid);
         }
     }
 }
