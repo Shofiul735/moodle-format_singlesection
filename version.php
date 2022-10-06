@@ -18,7 +18,7 @@
  * Version details
  *
  * @package    format
- * @subpackage newsection
+ * @subpackage singlesection
  * @copyright  2022 Md. Shofiul Islam
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,4 +27,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2022092900;        // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2022041200;        // Requires this Moodle version.
-$plugin->component = 'format_newsection';    // Full name of the plugin (used for diagnostics).
+$plugin->component = 'format_singlesection';    // Full name of the plugin (used for diagnostics).
