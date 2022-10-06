@@ -16,7 +16,7 @@
 
 
 /**
- * @package   format_newsection
+ * @package   format_singlesection
  * @copyright 2022, Md. Shofiul Islam
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
