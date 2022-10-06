@@ -15,15 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Renderer for outputting the newsection course format.
+ * Renderer for outputting the singlesection course format.
  *
- * @package format_newsection
+ * @package format_singlesection
  * @copyright 2022 Md. Shofiul
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @since Moodle 2.3
  */
 
-namespace format_newsection\output;
+namespace format_singlesection\output;
 
 use core_courseformat\output\section_renderer;
 use html_writer;
@@ -34,7 +34,7 @@ require_once(__DIR__ . '/../../externallib.php');
 
 
 /**
- * Basic renderer for newsection format.
+ * Basic renderer for singlesection format.
  *
  * @copyright 2012 Dan Poltawski
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -100,7 +100,7 @@ class renderer extends section_renderer
             echo html_writer::start_div();
             echo html_writer::tag('h1', $courseinfo->fullname);
             echo html_writer::end_div();
-            echo html_writer::img($imageurl, 'course image', ['width' => '100%', 'class' => 'newsection-image-height']);
+            echo html_writer::img($imageurl, 'course image', ['width' => '100%', 'class' => 'singlesection-image-height']);
             echo html_writer::start_div('text-justify mt-5');
             echo html_writer::tag('h3', 'Course Summary:', ['class' => 'text-primary']);
             echo html_writer::tag('h6', $courseinfo->summary, ['class' => 'text-secondary']);
@@ -117,8 +117,8 @@ class renderer extends section_renderer
         } else {
             if ($orphaned) {
                 if (!empty($modinfo->sections[1])) {
-                    $output .= $this->output->heading(get_string('orphaned', 'format_newsection'), 3, 'sectionname');
-                    $output .= $this->output->box(get_string('orphanedwarning', 'format_newsection'));
+                    $output .= $this->output->heading(get_string('orphaned', 'format_singlesection'), 3, 'sectionname');
+                    $output .= $this->output->box(get_string('orphanedwarning', 'format_singlesection'));
 
                     $section = $modinfo->get_section_info(1);
                     $output .= $this->render(new $cmlistclass($format, $section));
