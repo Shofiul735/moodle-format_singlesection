@@ -91,7 +91,7 @@ class renderer extends section_renderer
             $progress = get_progress($courseinfo);
 
             $buttontext = null;
-            if ($progress === 0) {
+            if ($progress === 0.0) {
                 $buttontext = 'Start Course';
             } else {
                 $buttontext = 'Resume Course';
