@@ -21,10 +21,14 @@
  * @copyright 2022 Md. Shofiul Islam
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
+
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/filelib.php');
 require_once($CFG->libdir . '/completionlib.php');
+
+$CFG->cachejs = false;
 
 // Horrible backwards compatible parameter aliasing..
 if ($singlesection = optional_param('singlesection', 0, PARAM_INT)) {
@@ -49,5 +53,5 @@ if ($isStudent) {
     $renderer->display($course, $section != 0);
 } else {
     $renderer->print_single_section_page($course, $sections, $mods, $modnames, $modnamesused, $displaysection);
+    $PAGE->requires->js('/course/format/singlesection/format.js');
 }
-$PAGE->requires->js('/course/format/singlesection/format.js');
